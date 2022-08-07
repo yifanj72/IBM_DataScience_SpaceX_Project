@@ -37,7 +37,3 @@ Analysis
 * KSC LC-39A had the top 1 successful launches among all sites
 * Low weighted payloads performs better
 * The success rate of SpaceX launches is directly proportional to the period in years it will take them to perfect the launches.
-
-
-## Files
-*
