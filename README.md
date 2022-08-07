@@ -1,51 +1,43 @@
-# IBM Data Science Certificate Final Project - SpaceX LauNch
+# IBM Data Science Certificate Final Project - SpaceX Launch
 
 ## Description
-The purpose of this project is to analyze features of mushrooms to predict if the mushroom is edible.
-* This project utilizes the Mushroom dataset from Kaggle. The data includes data about the appearance, smell, population, and habitat of various mushroomsm, and marked to be edible or not.
-* The analysis will include feature selection, PCA and MCA, supervised and unsupervised machine learning, and a nerual network.
+In this project, we will forcast if the Falcon 9 first stage will successfully land. 
+* You will find answers to the following problems:
+  * What factors determine whether or not the rocket lands successfully?
+  * The influence that each relationship with specific rocket characteristics will have on the success rate of a successful landing.
+  * What requirements must SpaceX meet in order to obtain the greatest results and ensure the highest rate of rocket landing success?
 
 ## Data
-* The data was downloaded from [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification).     
-* The data is in CSV format, has 8124 columns and 23 rows.
+* The data was collected from:
+  * Collect SpaceX launch data from SpaceX API
+  * Another approach of data collecting is web scraping using BeautifulSoup Package
 
 ## Methodology and Tools
-* Dimensional Reduction
-  * MCA
-  * PCA
-* Traditional Supervised ML Model
-  * Logistic Regression
-  * SGD Classifier
-  * Support Vector Classification
-* Traditional Unsupervised Learning
-  * K-Modes (Clustering)
-* Deep Learning
-  * Neural Network
-* Tools
-  * Cloud Platform: Google Collaboratory
-  * Data Storage: Google Drive 
-
+* EDA
+  * SQl to list filtered dataframes
+  * Executed SQL to display filtered tables, better understanding the dataset
+  * Built Interactive Maps with Folium
+  * Summarized findings using an Interactive dashboard with Plotly Dash
+* Predictive Analysis (Classification) 
+  * BuildingModel
+    * Create a NumPy array from the column Class
+    * Standardize the data in X then reassign it to X
+    * Split the data X and Y into training and test data
+    * Create a logistic regression object then create a GridSearchCV object
+    * Create a support vector machine object then create a GridSearchCV object
+    * Create a decision tree classifier object then create a GridSearchCV object
+    * Create a k nearest neighbors object then create a GridSearchCV object
+* Evaluation Metrics
+  * Acuracy Score
+  * Confusion Matrix
 ## Findings and Conclusions
-* Given our goal of maximizing recall, SVC was the best model because it returns the highest recall after feature engineering. It’s performance after PCA and MCA is also more stable compared to other models.
-* Odor is the most important feature. While in the wild, you'll have a better chance picking an edible mushroom if it doesn’t have any odor.
-* Neural Network is too complicated in this application.
-* Feature importance ranking for different models is more diverse after feature engineering. We start to see differences in the ranking from different models.
-* Dimensional reduction helps to resolve the highly correlated variables in selective cases. For decision tree and random forest, model performance is improved after dimensional reduction.
+* GEO, HEO, SSO, ES-L1 has the top 4 success rate.
+* Tree Classification Model is the best for Machine Learning & Predictive
+Analysis
+* KSC LC-39A had the top 1 successful launches among all sites
+* Low weighted payloads performs better
+* The success rate of SpaceX launches is directly proportional to the period in years it will take them to perfect the launches.
+
 
 ## Files
-* mushrooms.csv
-  * Contains the original data downloaded from Kaggle. 
-* Mushroom_base.ipynb
-  * Data cleanring, visulization and EDA in Python. Baseline models without any techniques applied.
-* Mushroom_Feature_Engineering.ipynb
-  * Feature engineering process and re-run models afterwards. 
-* data_feature_engineering.csv
-  * Feature engineering output stored in a CSV file. 
-* Mushroom_PCA_MCA.ipynb
-  * Two dimentional reduction techniques applied, re-run and re-evaluate models afterwards. 
-* Mushroom_NN.ipynb
-  * Deep learning: neural network applied to the mushroom data. 
-* Mushroom-kmodes.ipynb
-  * KModes clustering codes, which is one of the unsupervised Machine Learning algorithms that is used to cluster categorical variables. 
-* Mushroom-Gill.twb & Mushroom-veil& ring.twb
-  * Tableau dashboards for Mushroom gill, veil, and ring visulizations on the EDA part.
+*
